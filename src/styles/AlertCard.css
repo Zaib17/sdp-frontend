@@ -1,0 +1,202 @@
+/* ====================================================
+   ⚡ Alert Card — Deep Dark-Brown + Vibrant Orange Theme
+==================================================== */
+
+/* === Main Card === */
+.alert-card.full-width {
+  width: 100%;
+  background: linear-gradient(145deg, #3e2723, #4e342e); /* deep brown gradient */
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.6rem;
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  color: #f5f5f5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.alert-card.full-width:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 183, 77, 0.4);
+}
+
+/* === Header === */
+.alert-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffb74d;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.icon-title {
+  color: #ffa726;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 1px 2px rgba(255, 152, 0, 0.3));
+}
+
+/* === Individual Alerts === */
+.alert-box {
+  background: #4e342e; /* mid-tone brown */
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 500;
+  border-left: 5px solid #ff9800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alert-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.alert-box span {
+  font-weight: 600;
+  color: #ffb74d;
+}
+
+/* === Summary Section === */
+.summary-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 1.2rem;
+}
+
+.summary-item {
+  flex: 1;
+  min-width: 130px;
+  text-align: center;
+  background: #2e1c17; /* darker inner brown */
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  color: #f5f5f5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.summary-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 183, 77, 0.4);
+}
+
+.summary-item .label {
+  display: block;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+.summary-item .value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffb74d;
+}
+
+/* === Buttons Section === */
+.alert-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* === Orange Primary Button === */
+.orange-btn {
+  background: linear-gradient(90deg, #ff9800, #f57c00);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 152, 0, 0.35);
+}
+
+.orange-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.45);
+}
+
+/* === Gray Secondary Button === */
+.gray-btn {
+  background: #5d4037;
+  color: #ddd;
+}
+
+.gray-btn:hover {
+  background: #6d4c41;
+}
+
+/* === Confirmation Modal === */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.confirm-modal {
+  background: linear-gradient(145deg, #3e2723, #4e342e);
+  border-radius: 14px;
+  padding: 1.8rem 2.4rem;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  max-width: 400px;
+  border: 1px solid rgba(255, 152, 0, 0.25);
+}
+
+.confirm-modal h4 {
+  color: #ffb74d;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.confirm-buttons {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .summary-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-item {
+    width: 85%;
+  }
+
+  .alert-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 80%;
+  }
+}

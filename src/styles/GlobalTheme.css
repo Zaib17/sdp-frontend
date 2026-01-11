@@ -1,0 +1,155 @@
+/* ==========================================================
+   🌐 Global Theme — Dark Brown + Vibrant Orange Unified Design
+   Consistent visual identity across all pages
+========================================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(145deg, #2c1b0f, #4a2e1a); /* deep dark-brown gradient */
+  color: #fff;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ==============================
+   🧱 Global Reset & Transitions
+============================== */
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+/* ==============================
+   📦 Universal Container Card
+============================== */
+.container-card {
+  background: #3b2618; /* warm chocolate tone */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.container-card h2,
+.container-card h3,
+.container-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffa726; /* bright orange heading */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px rgba(255, 152, 0, 0.3);
+}
+
+/* ==============================
+   🧾 Typography Defaults
+============================== */
+p,
+span,
+label {
+  color: #e0c9a6; /* soft cream text for contrast */
+  line-height: 1.6;
+}
+
+a {
+  color: #ffa726;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #ffcc80;
+  text-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+}
+
+/* ==============================
+   🟠 Buttons — Unified Orange Glow
+============================== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff9800, #f57c00);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 152, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffa000, #ffb74d);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #6d4c41;
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ==============================
+   🧱 Dashboard Layout Wrapper
+============================== */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* ==============================
+   🌗 Divider Lines / Subtle Borders
+============================== */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 152, 0, 0.2);
+  margin: 1.5rem 0;
+}
+
+/* ==============================
+   🧠 Scrollbar Styling
+============================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c1b0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff9800, #f57c00);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#ffa726, #ffb74d);
+}
+
+/* ==============================
+   📱 Responsive Adjustments
+============================== */
+@media (max-width: 768px) {
+  .container-card {
+    padding: 1rem;
+  }
+
+  .dashboard-layout {
+    padding: 1rem;
+  }
+
+  .container-card h3 {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,113 @@
+/* === 🌟 System Health Section — Deep Dark-Brown + Orange Glow Theme === */
+
+.system-health-card {
+  background: linear-gradient(145deg, #2c1a0b, #3d2615); /* deep brown gradient */
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.system-health-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* === Section Title === */
+.system-health-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffb74d; /* warm orange accent */
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+}
+
+/* === Grid Layout: 4 items in one row === */
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+/* === Individual Health Card === */
+.health-item {
+  background: linear-gradient(160deg, #3d2615, #2b1a0b); /* warm chocolate tones */
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 152, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.health-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.25);
+  border-color: rgba(255, 152, 0, 0.35);
+}
+
+/* === Icons & Text === */
+.health-icon {
+  color: #ff9800;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 4px rgba(255, 152, 0, 0.4));
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}
+
+.value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+}
+
+/* === State Colors === */
+.value.online {
+  color: #66bb6a; /* green accent */
+  text-shadow: 0 0 6px rgba(102, 187, 106, 0.3);
+}
+
+.value.offline {
+  color: #e53935; /* red for offline */
+  text-shadow: 0 0 4px rgba(229, 57, 53, 0.3);
+}
+
+.value.good {
+  color: #42a5f5; /* blue accent */
+  text-shadow: 0 0 5px rgba(66, 165, 245, 0.3);
+}
+
+/* === Responsive Layouts === */
+@media (max-width: 900px) {
+  .health-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .health-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-health-card {
+    padding: 1.25rem;
+  }
+
+  .health-item {
+    padding: 1rem;
+  }
+}

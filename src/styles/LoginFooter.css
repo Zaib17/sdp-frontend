@@ -1,0 +1,92 @@
+/* ====================================================
+   ⚡ Login Footer — Dark Brown + Orange Unified Theme
+==================================================== */
+.login-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #2c1b15, #3e2723); /* match Dashboard footer */
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 13px;
+  border-top: 2px solid #ff9800; /* orange accent separator */
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  letter-spacing: 0.3px;
+  transition: none; /* remove hover effect */
+}
+
+/* --- Center Text --- */
+.footer-center {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: #ffcc80; /* soft orange tint for text */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Right Section (Links / Contact) */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align all links to left */
+  gap: 4px;
+  margin-right: -55px;
+}
+
+/* Each link */
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffa726;
+  text-decoration: none;
+  font-size: 12.8px;
+  width: 130px; /* ensure same width for all items */
+}
+
+.footer-link:hover {
+  color: #ffb74d;
+  transform: translateY(-2px);
+}
+
+/* --- Icon Style --- */
+.icon {
+  width: 15px;
+  height: 15px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover .icon {
+  opacity: 1;
+}
+
+
+/* ====================================================
+   📱 Responsive Design
+==================================================== */
+@media (max-width: 768px) {
+  .login-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 18px;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .footer-center {
+    font-size: 12.5px;
+  }
+}

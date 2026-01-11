@@ -1,0 +1,76 @@
+/* ===============================
+   ⚡ Dashboard Footer — Dark Brown + Orange Accent
+================================= */
+.footer {
+  background: linear-gradient(90deg, #3e2723, #4e342e); /* dark brown gradient */
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  border-top: 2px solid #ff9800; /* orange accent line */
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 900;
+}
+
+/* === Footer Left Text === */
+.footer p {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* === Footer Right Links/Icons === */
+.footer-right,
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffb74d; /* soft orange */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+/* === Icons inside footer (if any) === */
+.footer-right i,
+.footer-right svg {
+  color: #ffb74d;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-right i:hover,
+.footer-right svg:hover {
+  color: #ffc107;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+
+  .footer-right,
+  .footer-links {
+    justify-content: center;
+  }
+}

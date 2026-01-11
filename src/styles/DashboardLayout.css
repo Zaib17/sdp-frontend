@@ -1,0 +1,238 @@
+/* ====================================================
+   🌙 Dashboard Layout — Dark Brown & Vibrant Orange Theme
+==================================================== */
+
+/* === Overall Dashboard Wrapper === */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f59f;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* === Main Content Area === */
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+/* === Unified Section Layout === */
+.dashboard-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1.5rem;
+  background: #3b2618;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.2);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.dashboard-section:hover {
+  box-shadow: 0 10px 28px rgba(255, 165, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+/* === Full-width Control === */
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* === Section Titles === */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffa726; /* bright orange */
+  margin-bottom: 1rem;
+}
+
+.section-title .icon-title {
+  color: #ff9800;
+}
+
+/* === Meter Row Container === */
+.meter-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+/* === Meter Row Title === */
+.meter-row-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffa726;
+  margin-bottom: 0.75rem;
+}
+
+/* === Meter Cards Grid: Always 5 columns === */
+.meter-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* always 5 cards in a row */
+  gap: 12px; /* space between cards */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Meter Card Style === */
+.meter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(145deg, #4a2e1a, #3b2618);
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 240px;
+  width: 100%;
+  min-width: 0; /* allow shrinking */
+  border: 1px solid #ffb74d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.meter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 152, 0, 0.3);
+}
+
+/* === Meter Header === */
+.meter-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.meter-header h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffa726;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meter-id {
+  font-size: 0.85rem;
+  color: #f5deb3;
+}
+
+/* === Status === */
+.meter-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.status-text {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.icon.online {
+  color: #4caf50;
+}
+
+.icon.offline {
+  color: #f44336;
+}
+
+/* === Stats Grid === */
+.meter-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2c1b0f;
+  border-radius: 10px;
+  padding: 8px 6px;
+  width: 100%;
+  border: 1px solid #ffb74d;
+}
+
+.stat-item .icon {
+  color: #ff9800;
+  margin-bottom: 4px;
+}
+
+.stat-item span {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.stat-item label {
+  font-size: 0.8rem;
+  color: #ffcc80;
+}
+
+/* === Responsive Layouts: Keep 5 cards in row on all screens === */
+@media (max-width: 1400px) {
+  .meter-cards { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 1200px) {
+  .meter-cards { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .meter-cards { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .meter-cards { grid-template-columns: repeat(5, 1fr); }
+  .meter-card { max-width: 200px; margin: 0 auto; } /* optional for very small screens */
+}
+
+/* === System Health & Alert Cards === */
+.dashboard-section .alert-card,
+.dashboard-section .system-health-container {
+  background: linear-gradient(145deg, #4a2e1a, #3b2618);
+  color: #fff;
+  border-radius: 14px;
+  border: 1px solid #ffb74d;
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.dashboard-section .alert-card:hover,
+.dashboard-section .system-health-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255, 152, 0, 0.3);
+}
+
+/* === Header & Footer === */
+.dashboard-header,
+.dashboard-footer {
+  background: linear-gradient(90deg, #2c1b0f, #4a2e1a);
+  color: #fff;
+}

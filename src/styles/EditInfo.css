@@ -1,0 +1,215 @@
+/* ====================================================
+   🧾 Edit Info Container — Deep Dark-Brown + Vibrant Orange Theme
+==================================================== */
+.edit-info-container {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(145deg, #2b1d18, #3e2723); /* deep dark-brown gradient */
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+  border: 1px solid rgba(255, 152, 0, 0.25); /* subtle orange glow border */
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================================================
+   🟠 Heading
+==================================================== */
+.edit-info-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffb74d;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* ====================================================
+   ✏️ Form Groups
+==================================================== */
+.form-group {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #ffe0b2;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #6d4c41; /* warm brown border */
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #4e342e; /* warm chocolate input */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #ff9800;
+  background: #5d4037;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+/* ======================================================
+   🔐 Password Input — No Extra Box for Eye Icon
+====================================================== */
+
+/* Container for input + eye icon */
+.password-input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Input field */
+.password-input {
+  width: 100%;
+  padding: 10px 36px 10px 12px; /* right padding leaves room for icon */
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #2c1b0f; /* dark brown field */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Placeholder color */
+.password-input::placeholder {
+  color: #d7c4b9;
+  opacity: 0.8;
+}
+
+.toggle-eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffa726;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: none;
+}
+
+.toggle-eye:hover {
+  background: none;
+  color: #ffa726;
+  box-shadow: none;
+  transform: translateY(-50%);
+}
+
+
+/* ====================================================
+   🖼️ Profile Preview
+==================================================== */
+.preview-img {
+  margin-top: 10px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid #ff9800;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.preview-img:hover {
+  transform: scale(1.05);
+  border-color: #ffb74d;
+}
+
+/* ====================================================
+   ⚠️ Inline Messages
+==================================================== */
+.error-msg {
+  color: #f44336; /* same red, better contrast */
+  font-size: 0.9rem;
+  margin-top: -6px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.success-msg {
+  color: #4caf50;
+  font-size: 0.9rem;
+  margin-top: -6px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* ====================================================
+   💾 Form Actions
+==================================================== */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.btn-save {
+  background: linear-gradient(90deg, #ff9800, #f57c00); /* vibrant orange gradient */
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.45);
+}
+
+.btn-save:hover {
+  background: linear-gradient(90deg, #ffa000, #ffb74d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 152, 0, 0.55);
+}
+
+/* ====================================================
+   📱 Responsive Design
+==================================================== */
+@media (max-width: 600px) {
+  .edit-info-container {
+    padding: 1.6rem;
+    width: 92%;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+
+  .btn-save {
+    width: 100%;
+  }
+}

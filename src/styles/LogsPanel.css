@@ -1,0 +1,267 @@
+/* ======================================================
+   🌇 Logs Panel — Deep Dark Brown + Orange Unified Theme
+====================================================== */
+.logs-panel.full-width {
+  width: 100%;
+  background: linear-gradient(145deg, #2e1c17, #3e2723); /* deep dark-brown gradient */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* === Title === */
+.logs-title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #ffa726; /* vibrant orange */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.icon-title {
+  color: #ffa726;
+}
+
+/* === Buttons === */
+.logs-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.orange-btn {
+  background: linear-gradient(90deg, #ff9800, #ef6c00);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.orange-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #f57c00, #ff9800);
+}
+
+.gray-btn {
+  background: #4e342e; /* muted chocolate brown */
+  color: #ccc;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.25s ease;
+}
+
+.gray-btn:hover {
+  background: #5d4037;
+  color: #fff;
+}
+
+/* === Modal Overlay === */
+.modal-overlay,
+.logs-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* === Modal Container === */
+.modal-container,
+.logs-modal {
+  background: #3e2723; /* warm chocolate brown */
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  max-width: 850px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  color: #fff;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* === Modal Header === */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 0.6rem;
+}
+
+.modal-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #ffa726;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #ffb74d;
+}
+
+/* === Logs Table === */
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #5d4037;
+}
+
+.logs-table th {
+  background: #4e342e; /* dark brown header */
+  color: #ffa726;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.logs-table td {
+  background: #2e1c17;
+  color: #fff;
+}
+
+.logs-table tr:hover td {
+  background: rgba(255, 152, 0, 0.08);
+}
+
+/* === No Logs Text === */
+.no-logs {
+  text-align: center;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* === Action Buttons === */
+.delete-btn {
+  background: #d84315;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+  transform: scale(1.05);
+}
+
+.delete-all-btn {
+  background: linear-gradient(90deg, #e64a19, #d84315);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.delete-all-btn:hover {
+  background: linear-gradient(90deg, #ff7043, #e64a19);
+  transform: scale(1.05);
+}
+
+/* === Modal Footer === */
+.modal-actions,
+.logs-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* === Confirm Delete Modal === */
+.confirm-modal {
+  background: #3e2723;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.icon-warning {
+  color: #ffa726;
+  margin-bottom: 0.6rem;
+}
+
+.confirm-modal h4 {
+  margin-bottom: 0.5rem;
+  color: #ffa726;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .logs-buttons {
+    flex-direction: column;
+  }
+
+  .logs-table {
+    font-size: 0.85rem;
+  }
+
+  .modal-container,
+  .logs-modal {
+    padding: 1rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1rem;
+  }
+}

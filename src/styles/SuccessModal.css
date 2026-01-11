@@ -1,0 +1,101 @@
+/* === 🌟 Success Modal — Warm Dark-Brown + Vibrant Orange Theme === */
+
+/* === Modal Overlay === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Modal Content === */
+.modal-content {
+  background: linear-gradient(145deg, #2c1a0b, #3d2615); /* deep dark-brown gradient */
+  padding: 2rem;
+  border-radius: 14px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease-out;
+  color: #fff; /* white text */
+  border: 1px solid rgba(255, 153, 0, 0.25);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* === Heading === */
+.modal-content h3 {
+  color: #ffb74d; /* warm glowing orange */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+}
+
+/* === Success Text === */
+.success-text {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: #81c784; /* fresh green accent */
+  text-shadow: 0 0 4px rgba(129, 199, 132, 0.3);
+}
+
+/* === OK Button === */
+.btn-ok {
+  margin-top: 1.2rem;
+  background: linear-gradient(90deg, #ff9800, #ff6f00);
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(255, 152, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-ok:hover {
+  background: linear-gradient(90deg, #ffb74d, #ff9800);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.55);
+}
+
+/* === Eye Icon / Decorative Accents === */
+.modal-content .icon-eye {
+  color: #ff9800;
+  filter: drop-shadow(0 0 4px rgba(255, 152, 0, 0.5));
+}
+
+/* === Error Messages (kept for compatibility) === */
+.error-text {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 2px rgba(229, 57, 53, 0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .btn-ok {
+    width: 100%;
+    padding: 0.7rem;
+  }
+}

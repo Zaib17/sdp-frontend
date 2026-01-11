@@ -1,0 +1,247 @@
+/* ======================================================
+   🌇 Login Page — Dark Brown + Orange Glow Unified Theme
+====================================================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(145deg, #2c1b0f, #3e2615); /* rich dark brown gradient */
+  color: #fff;
+}
+
+/* ======================================================
+   🧩 Login Page Layout
+====================================================== */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #2c1b0f, #3e2615);
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  height: 80px;
+  object-fit: contain;
+
+  /* remove all hover / focus / glow / animation effects */
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-shadow: none !important;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+  transform: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-shadow: none !important;
+}
+
+
+/* ======================================================
+   💡 Login Container
+====================================================== */
+.login-container {
+  background: #3b2618; /* warm chocolate tone */
+  padding: 2rem 2.3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  animation: fadeIn 0.6s ease-out;
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ff9800;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 4px rgba(255, 152, 0, 0.4);
+}
+
+/* ======================================================
+   ✏️ Input Fields
+====================================================== */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #2c1b0f;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+input:focus {
+  border-color: #ff9800;
+  background: #4a2d19;
+}
+
+/* ======================================================
+   🔐 Password Field & Eye Icon
+====================================================== */
+.password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff9800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s ease;
+}
+
+.toggle-eye:hover {
+  color: #ffb74d;
+}
+
+/* ======================================================
+   ⚠️ Inline Error Message
+====================================================== */
+.error-msg {
+  color: #ef5350;
+  font-size: 0.9rem;
+  margin-top: -6px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* ======================================================
+   🚀 Buttons
+====================================================== */
+button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff9800, #f57c00);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #ffa000, #ffb74d);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(255, 152, 0, 0.4);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #5d4037;
+}
+
+/* ======================================================
+   🔗 Forgot Password
+====================================================== */
+.forgot-link {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #ffb74d;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.forgot-link:hover {
+  color: #ff9800;
+}
+
+/* ======================================================
+   ⚙️ Footer (Dark Brown Glow)
+====================================================== */
+.footer {
+  background: #2c1b0f;
+  padding: 0.6rem 1rem;
+  color: #ffcc80;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer .lucide-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+}
+
+/* ======================================================
+   📱 Responsive Design
+====================================================== */
+@media (max-width: 500px) {
+  .logo {
+    height: 65px;
+    top: 15px;
+    left: 20px;
+  }
+
+  .login-container {
+    margin: 0 20px;
+    padding: 1.5rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .footer .lucide-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
